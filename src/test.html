@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Four Division Layout</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .header {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1em;
+        height: 10%;
+      }
+
+      .left-sidebar {
+        background-color: #f4f4f4;
+        padding: 1em;
+        float: left;
+        width: 10%;
+        height: calc(
+          100vh - 140px
+        ); /* Adjust height considering header and footer */
+        box-sizing: border-box;
+      }
+      .content {
+        float: left;
+        width: 90%;
+        padding: 1em;
+        box-sizing: border-box;
+      }
+      .footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1em;
+        clear: both;
+      }
+      @media (max-width: 768px) {
+        .left-sidebar,
+        .content {
+          float: none;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header"><h1>Header</h1></div>
+    <div class="left-sidebar"><p>Left Sidebar</p></div>
+    <div class="content"><p>Main Content Area</p></div>
+    <div class="footer"><p>Footer</p></div>
+  </body>
+</html>
